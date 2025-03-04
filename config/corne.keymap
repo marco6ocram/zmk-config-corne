@@ -20,21 +20,6 @@
     combos {
         compatible = "zmk,combos";
 
-        Clear_BLE_Profile {
-          bindings = <&bt BT_CLR>;
-          key-positions = <0 38 5>;
-        };
-
-        Space {
-          bindings = <&kp SPACE>;
-          key-positions = <29 28>;
-        };
-
-        Enter {
-          bindings = <&kp ENTER>;
-          key-positions = <17 16>;
-        };
-
         Capslock {
           bindings = <&kp CLCK>;
           key-positions = <5 6>;
