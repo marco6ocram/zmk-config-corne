@@ -11,7 +11,9 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &nice_view_spi {
-    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
+    compatible = "zephyr,spi-device";
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
+    spi-max-frequency = <8000000>; /* 8MHz */
 };
 &led_strip {
   chain-length = <27>; // 21 backlight + 6 underglow
