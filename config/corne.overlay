@@ -1,3 +1,0 @@
-&ext_power {
-    init-delay-ms = <500>; // Adds 500ms delay after initialization
-};
