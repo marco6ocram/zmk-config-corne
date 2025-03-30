@@ -24,7 +24,7 @@
 
 // fixing potential shortage/PIN damage after reversing battery polarity by accident
 &pro_micro {
-    matrix-row-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    matrix-row-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 };
 
 
