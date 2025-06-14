@@ -33,21 +33,6 @@
     };
 
     behaviors {
-        set_dvorak: set_dvorak {
-            label = "SET_DVORAK";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&set-default-layer(0)>; // Dvorak
-        };
-
-        set_qwerty: set_qwerty {
-            label = "SET_QWERTY";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&set-default-layer(1)>; // QWERTY
-        };
         td_atcar: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -122,9 +107,9 @@
         // |LSHIFT    |       | EPWR| RGB | EFF |     |     |      |     |     |        |        |        |
         //                          | GUI |     | SPC |     |      | ENT |     | ALT |
             bindings = <
-        &kp F1 &kp F2       &kp F3       &kp F4            &kp F5          &kp F6            &kp F7      &kp F8      &kp F9 &kp F10 &kp F11 &kp F12
-        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4      &set_dvorak &set_qwerty &trans &trans  &trans  &bt BT_CLR
-        &trans &trans       &trans       &ext_power EP_TOG &rgb_ug RGB_TOG &rgb_ug RGB_EFF   &trans      &trans      &trans &trans  &trans  &trans
+        &kp F1 &kp F2       &kp F3       &kp F4            &kp F5          &kp F6            &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+        &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4      &tog 0 &tog 1 &trans &trans  &trans  &bt BT_CLR
+        &trans &trans       &trans       &ext_power EP_TOG &rgb_ug RGB_TOG &rgb_ug RGB_EFF   &trans &trans &trans &trans  &trans  &trans
                                                           &trans   &trans   &trans              &trans   &trans   &trans
             >;
         };
