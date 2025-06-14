@@ -33,22 +33,26 @@
     };
 
     behaviors {
-        td_atcar: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp AT>, <&kp CARET>;
-        };
         set_dvorak: set_dvorak {
             label = "SET_DVORAK";
-            compatible = "zmk,behavior-momentary-layer";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&set_default_layer 0>; // Dvorak
         };
 
         set_qwerty: set_qwerty {
             label = "SET_QWERTY";
-            compatible = "zmk,behavior-momentary-layer";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&set_default_layer 1>; // QWERTY
+        };
+        td_atcar: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp AT>, <&kp CARET>;
         };
     };
 
